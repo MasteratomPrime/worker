@@ -1,7 +1,7 @@
 import sqlite3
 import threading
 
-conn = sqlite3.connect("/home/atom/Projekty/Protopia/backend/baza.db", check_same_thread=False)
+conn = sqlite3.connect("db/baza.db", check_same_thread=False)
 conn.execute("PRAGMA journal_mode=WAL;").fetchone()
 
 _db_lock = threading.Lock()
